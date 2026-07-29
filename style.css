@@ -11,7 +11,7 @@
       color: #f5f5f5;
     }
 
-    /* contenedor principal con fondo blanco/nagro */
+
     .wrapper {
       max-width: 1300px;
       margin: 0 auto;
@@ -20,15 +20,15 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.6);
     }
 
-    /* ---------- HEADER / LOGO ---------- */
+
     .header {
-      background: #000000; /* negro */
+      background: #000000; 
       padding: 1.8rem 2.5rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 6px solid #d4af37; /* dorado */
+      border-bottom: 6px solid #d4af37; 
     }
 
     .logo-block {
@@ -38,7 +38,7 @@
     }
 
     .logo-icon {
-      background: #d4af37; /* dorado */
+      background: #d4af37; 
       color: #000;
       width: 60px;
       height: 60px;
@@ -96,7 +96,7 @@
       color: #000;
     }
 
-    /* ---------- NAV (rojo/negro) ---------- */
+    
     .nav-bar {
       background: #1a1a1a;
       padding: 0.6rem 2.5rem;
@@ -349,28 +349,6 @@
       color: #cc0000;
     }
 
-    /* responsive */
-    @media (max-width: 700px) {
-      .header {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .header-contact {
-        align-self: flex-start;
-      }
-      .nav-bar {
-        gap: 1rem;
-        justify-content: center;
-      }
-      .contact-grid {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .section-title {
-        font-size: 1.6rem;
-      }
-    }
 
     /* simular logo "WAYNE SYSTEM" en texto (imagen) */
     .logo-svg-sim {
@@ -389,4 +367,97 @@
       letter-spacing: 3px;
       border: 2px solid #fff;
       box-shadow: 0 0 0 2px #d4af37;
+    }
+
+    .wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      background: #ffffff;
+      color: #1e1e1e;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+      padding: 0 1rem;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .wrapper {
+        box-shadow: none;
+      }
+      .nav-bar {
+        padding: 0.8rem 0;
+      }
+      .section {
+        padding: 2.2rem 1.4rem;
+      }
+      .contact-grid {
+        padding: 1.5rem;
+      }
+      .footer {
+        padding: 1.5rem 1.4rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .header-contact {
+        align-self: stretch;
+        justify-content: flex-start;
+      }
+      .nav-bar {
+        gap: 0.8rem;
+        justify-content: center;
+      }
+      .nav-bar a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+      }
+      .contact-grid {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .contact-grid,
+      .card,
+      .contact-item {
+        width: 100%;
+      }
+      .contact-item {
+        justify-content: flex-start;
+      }
+      .section {
+        padding: 1.8rem 1rem;
+      }
+      .card {
+        padding: 1.4rem 1rem;
+      }
+      .service-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+      .logo-text .wayne {
+        font-size: 1.9rem;
+      }
+      .logo-text .system {
+        font-size: 1.2rem;
+      }
+      .logo-text .corp {
+        font-size: 0.75rem;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+      }
+      .footer div {
+        width: 100%;
+      }
     }

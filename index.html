@@ -2,408 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- añadido viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wayne System · Venta y reparación</title>
-  <!-- Font Awesome para iconos -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    }
-
-    body {
-      background-color: #0b0b0b;
-      color: #f5f5f5;
-    }
-
-    /* contenedor principal con fondo blanco/nagro */
-    .wrapper {
-      max-width: 1300px;
-      margin: 0 auto;
-      background: #ffffff;
-      color: #1e1e1e;
-      box-shadow: 0 0 40px rgba(0,0,0,0.6);
-    }
-
-    /* ---------- HEADER / LOGO ---------- */
-    .header {
-      background: #000000; /* negro */
-      padding: 1.8rem 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 6px solid #d4af37; /* dorado */
-    }
-
-    .logo-block {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .logo-icon {
-      background: #d4af37; /* dorado */
-      color: #000;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-      box-shadow: 0 0 0 2px #fff, 0 0 0 4px #d4af37;
-    }
-
-    .logo-text {
-      line-height: 1.1;
-    }
-
-    .logo-text .wayne {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 4px;
-    }
-
-    .logo-text .system {
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: #d4af37;
-      letter-spacing: 6px;
-      display: block;
-    }
-
-    .logo-text .corp {
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: #aaaaaa;
-      letter-spacing: 3px;
-    }
-
-    .header-contact {
-      background: #d4af37;
-      padding: 0.6rem 1.6rem;
-      border-radius: 40px;
-      color: #000;
-      font-weight: 600;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      border: 2px solid #ffffff;
-    }
-
-    .header-contact i {
-      font-size: 1.1rem;
-      color: #000;
-    }
-
-    /* ---------- NAV (rojo/negro) ---------- */
-    .nav-bar {
-      background: #1a1a1a;
-      padding: 0.6rem 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      border-bottom: 3px solid #cc0000; /* rojo */
-    }
-
-    .nav-bar a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      letter-spacing: 1px;
-      padding: 0.4rem 0;
-      border-bottom: 2px solid transparent;
-      transition: 0.2s;
-    }
-
-    .nav-bar a:hover {
-      color: #d4af37;
-      border-bottom-color: #d4af37;
-    }
-
-    .nav-bar a i {
-      margin-right: 8px;
-      color: #cc0000;
-    }
-
-    /* ---------- SECCIONES (blanco/negro con acentos) ---------- */
-    section {
-      padding: 3rem 2.5rem;
-      background: #ffffff;
-      border-bottom: 2px solid #e0e0e0;
-    }
-
-    section:nth-child(odd) {
-      background: #f8f8f8;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-left: 8px solid #d4af37;
-      padding-left: 20px;
-      color: #111;
-    }
-
-    .section-title i {
-      color: #cc0000;
-      font-size: 2rem;
-      width: 2.2rem;
-    }
-
-    .section-title span {
-      background: #000;
-      color: #d4af37;
-      padding: 0.1rem 0.9rem;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      margin-left: 10px;
-    }
-
-    /* grids */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin-top: 0.5rem;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 1.8rem 1.2rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-      border: 1px solid #ececec;
-      transition: 0.2s;
-      text-align: center;
-      color: #1e1e1e;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #d4af37;
-      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.15);
-    }
-
-    .card i {
-      font-size: 2.8rem;
-      color: #cc0000;
-      background: #000;
-      padding: 0.6rem;
-      border-radius: 60px;
-      width: 70px;
-      margin-bottom: 1rem;
-      color: #d4af37;
-    }
-
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #000;
-      font-weight: 600;
-    }
-
-    .card p {
-      color: #2e2e2e;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .badge-rojo {
-      background: #cc0000;
-      color: #fff;
-      padding: 0.2rem 1rem;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 8px;
-    }
-
-    /* lista de servicios */
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem 2.5rem;
-      margin: 1.5rem 0 0.5rem;
-      padding-left: 10px;
-    }
-
-    .service-list li {
-      list-style: none;
-      font-size: 1.05rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #f0f0f0;
-      padding: 0.3rem 1.2rem 0.3rem 0.8rem;
-      border-radius: 40px;
-      border-left: 5px solid #d4af37;
-    }
-
-    .service-list li i {
-      color: #cc0000;
-      width: 24px;
-    }
-
-    /* ---------- CONTACTO (dorado/rojo) ---------- */
-    .contact-section {
-      background: #000000; /* negro */
-      color: #ffffff;
-      border-bottom: 6px solid #d4af37;
-    }
-
-    .contact-section .section-title {
-      color: #000000;
-      border-left-color: #d4af37;
-    }
-
-    .contact-section .section-title i {
-      color: #d4af37;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-      background: #141414;
-      padding: 2rem 2rem;
-      border-radius: 40px;
-      border: 1px solid #d4af37;
-      margin-top: 1.5rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 1.1rem;
-      background: #222;
-      padding: 0.5rem 1.8rem 0.5rem 1.2rem;
-      border-radius: 60px;
-      border: 1px solid #3a3a3a;
-      flex-wrap: wrap;
-    }
-
-    .contact-item i {
-      color: #d4af37;
-      font-size: 1.6rem;
-      width: 2rem;
-    }
-
-    .contact-item strong {
-      color: #000000;
-      font-weight: 400;
-    }
-
-    .contact-item .highlight {
-      color: #d4af37;
-      font-weight: 600;
-      background: #000;
-      padding: 0.1rem 0.8rem;
-      border-radius: 60px;
-      border: 1px solid #d4af37;
-    }
-
-    .ubicacion {
-      background: #1a1a1a;
-      padding: 0.8rem 2rem;
-      border-radius: 60px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      border: 1px solid #cc0000;
-      color: #f0f0f0;
-    }
-
-    .ubicacion i {
-      color: #cc0000;
-    }
-
-    /* ---------- FOOTER ---------- */
-    .footer {
-      background: #0b0b0b;
-      padding: 1.5rem 2.5rem;
-      color: #aaa;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 3px solid #d4af37;
-      font-size: 0.9rem;
-    }
-
-    .footer .copy {
-      color: #d4af37;
-    }
-
-    .footer i {
-      color: #cc0000;
-    }
-
-    /* responsive */
-    @media (max-width: 700px) {
-      .header {
-        flex-direction: column;
-        align-items: start;
-        gap: 1rem;
-      }
-      .header-contact {
-        align-self: flex-start;
-      }
-      .nav-bar {
-        gap: 1rem;
-        justify-content: center;
-      }
-      .contact-grid {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .section-title {
-        font-size: 1.6rem;
-      }
-    }
-
-    /* simular logo "WAYNE SYSTEM" en texto (imagen) */
-    .logo-svg-sim {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .logo-img-placeholder {
-      background: #d4af37;
-      color: #000;
-      font-weight: 900;
-      padding: 10px 18px;
-      border-radius: 60px;
-      font-size: 1.4rem;
-      letter-spacing: 3px;
-      border: 2px solid #fff;
-      box-shadow: 0 0 0 2px #d4af37;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrapper">
 
-  <!-- HEADER con logo WAYNE SYSTEM (estilo imagen) -->
+  
   <header class="header">
     <div class="logo-block">
       <div class="logo-icon">W</div>
@@ -419,7 +28,7 @@
     </div>
   </header>
 
-  <!-- Navegación -->
+
   <nav class="nav-bar">
     <a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a>
     <a href="#venta-pc"><i class="fas fa-laptop"></i> Computadoras</a>
@@ -428,7 +37,7 @@
     <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
   </nav>
 
-  <!-- SECCIÓN SERVICIOS (general) -->
+
   <section id="servicios">
     <div class="section-title">
       <i class="fas fa-bolt"></i> SERVICIOS <span>WAYNE</span>
@@ -455,7 +64,7 @@
     </div>
   </section>
 
-  <!-- VENTA COMPUTADORAS -->
+
   <section id="venta-pc">
     <div class="section-title">
       <i class="fas fa-desktop"></i> COMPUTADORAS <span>venta</span>
@@ -470,7 +79,7 @@
     </div>
   </section>
 
-  <!-- VENTA SOFTWARE -->
+
   <section id="venta-software">
     <div class="section-title">
       <i class="fas fa-cloud-upload-alt"></i> SOFTWARE <span>licencias</span>
@@ -487,7 +96,7 @@
     </ul>
   </section>
 
-  <!-- REPARACIÓN -->
+
   <section id="reparacion">
     <div class="section-title">
       <i class="fas fa-hammer"></i> REPARACIÓN <span>técnica</span>
@@ -502,7 +111,7 @@
     </div>
   </section>
 
-  <!-- CONTACTO con datos: José Manuel Vargas Diaz, cel 77924003, Quillacollo, Plaza Bolívar -->
+
   <section id="contacto" class="contact-section">
     <div class="section-title">
       <i class="fas fa-address-card"></i> CONTACTO <span>directo</span>
@@ -519,7 +128,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+
   <footer class="footer">
     <div><i class="fas fa-copyright"></i> 2026 Wayne System Corporation · <span class="copy">J.M. Vargas D.</span></div>
     <div><i class="fas fa-map-pin"></i> Quillacollo - Plaza Bolívar · <i class="fas fa-phone"></i> 77924003</div>
@@ -531,6 +140,6 @@
   </footer>
 
 </div>
-<!-- fin wrapper -->
+
 </body>
 </html>
