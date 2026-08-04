@@ -1,13 +1,7 @@
-let contadorTurnos = 0;
-
 function mostrarMensaje() {
-  contadorTurnos += 1;
-  const lista = document.querySelector("#lista-turnos");
-  const contenedor = document.querySelector("#mensajes");
-  const item = document.createElement("li");
-  item.textContent = `Turno #${contadorTurnos} - Turno recibido - te atiende Jose Manuel Vargas Diaz`;
-  lista.appendChild(item);
-  contenedor.classList.remove("oculto");
+  const mensaje = document.querySelector("#mensaje");
+  mensaje.textContent = "Turno recibido - te atiende Jose Manuel Vargas Diaz";
+  mensaje.classList.remove("oculto");
 }
 
 document.querySelector("#btn-confirmar").addEventListener("click", mostrarMensaje);
