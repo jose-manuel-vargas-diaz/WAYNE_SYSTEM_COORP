@@ -1,0 +1,1 @@
+{"version":2,"defects":{"Tests\\Feature\\LoginTest::test_user_can_login_with_default_credentials":8,"Tests\\Feature\\LoginTest::test_admin_requires_authentication":8},"times":{"Tests\\Feature\\LoginTest::test_user_can_login_with_default_credentials":0.065,"Tests\\Feature\\LoginTest::test_admin_requires_authentication":0.002}}

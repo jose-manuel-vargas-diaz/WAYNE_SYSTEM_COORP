@@ -1,0 +1,33 @@
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+
+# Node / frontend
+node_modules/
+
+# Laravel / PHP dependencies
+vendor/
+laravel10-app/vendor/
+laravel10-app/node_modules/
+
+# Secret environment files
+.env
+.env.*
+laravel10-app/.env
+laravel10-app/.env.*
+
+# Local SQLite databases
+*.sqlite
+*.sqlite3
+database/*.sqlite
+database/*.sqlite3
+laravel10-app/database/*.sqlite
+laravel10-app/database/*.sqlite3
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
