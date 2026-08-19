@@ -258,6 +258,31 @@ section {
     border-bottom: 2px solid var(--border);
 }
 
+.integradora-body { min-height: 100vh; background: #eeeeee; color: #222; }
+.integradora-main { min-height: calc(100vh - 70px); background: #f7f7f7; }
+.inventory-page, .form-page { width: min(92%, 850px); margin: 0 auto; padding: 45px 0; }
+.inventory-header, .form-header { margin-bottom: 25px; }
+.inventory-header h1, .form-header h1 { margin-bottom: 10px; color: #333; font-size: 2.3rem; }
+.inventory-header p, .form-header p { color: #666; line-height: 1.5; }
+.inventory-summary { margin-bottom: 20px; padding: 12px 15px; border: 1px solid #ddd; background: #fff; }
+.inventory-summary p { color: #555; }
+.tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.tool-card { padding: 18px; border: 1px solid #ddd; border-radius: 5px; background: #fff; }
+.tool-card h2 { margin-bottom: 8px; color: #333; font-size: 1.2rem; }
+.tool-card p { color: #666; }
+.empty-inventory { grid-column: 1 / -1; padding: 20px; border: 1px dashed #bbb; color: #666; text-align: center; }
+.inventory-signature { margin: 25px 0 12px; color: #666; }
+.simple-link { color: #9b4b25; font-weight: 700; }
+.tool-form { max-width: 520px; padding: 22px; border: 1px solid #ddd; background: #fff; }
+.form-field { display: grid; gap: 6px; margin-bottom: 16px; }
+.form-field label { font-weight: 700; }
+.form-field input { width: 100%; padding: 9px; border: 1px solid #bbb; border-radius: 3px; font-size: 1rem; }
+.tool-form button { padding: 10px 15px; border: 0; border-radius: 3px; background: #9b4b25; color: #fff; cursor: pointer; font-weight: 700; }
+.validation-alert { margin-bottom: 18px; padding: 12px 15px; border: 1px solid #d99; background: #fff0f0; color: #8b2222; }
+.validation-alert ul { margin: 5px 0 0 20px; }
+.integradora-footer { padding: 20px; background: #333; color: #fff; text-align: center; }
+@media (max-width: 650px) { .tools-grid { grid-template-columns: 1fr; } .inventory-header h1, .form-header h1 { font-size: 1.9rem; } }
+
 .section-box.alt {
     background: #f8f8f8;
 }
