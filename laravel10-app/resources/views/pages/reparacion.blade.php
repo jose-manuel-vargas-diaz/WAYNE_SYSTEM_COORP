@@ -9,20 +9,23 @@
 </section>
 
 <section class="section-box">
-    <div class="grid-3">
-        <article class="feature-card">
+    <div class="grid-3 image-card-grid">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=80" alt="Componentes de computadora">
             <i class="fas fa-microchip"></i>
             <h3>Hardware</h3>
             <p>Reemplazo de piezas, limpieza interna y diagnóstico profesional.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Configuración de software">
             <i class="fas fa-window-maximize"></i>
             <h3>Software y sistema</h3>
             <p>Reinstalaciones, configuraciones, virus, drivers y optimización.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=700&q=80" alt="Mantenimiento de PC">
             <i class="fas fa-fan"></i>
             <h3>Mantenimiento</h3>
             <p>Mejora del rendimiento y cuidado preventivo de tus equipos.</p>

@@ -9,20 +9,23 @@
 </section>
 
 <section class="section-box">
-    <div class="grid-3">
-        <article class="feature-card">
+    <div class="grid-3 image-card-grid">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80" alt="Laptop para trabajo">
             <i class="fas fa-laptop"></i>
             <h3>Venta de equipos</h3>
             <p>Computadoras, laptops y estaciones de trabajo listas para cada necesidad.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80" alt="Código en pantalla">
             <i class="fas fa-code"></i>
             <h3>Licencias</h3>
             <p>Software original, activación y soporte para uso doméstico o empresarial.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80" alt="Componentes electrónicos">
             <i class="fas fa-screwdriver-wrench"></i>
             <h3>Reparación</h3>
             <p>Diagnóstico, mantenimiento y soluciones rápidas para hardware y software.</p>

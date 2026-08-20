@@ -427,6 +427,49 @@ section {
     color: var(--gold);
 }
 
+.contact-section { background: #fafafa; }
+.contact-form, .proforma-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 900px; }
+.form-field { display: grid; gap: .4rem; }
+.form-field-wide { grid-column: 1 / -1; }
+.form-field label { font-weight: 700; color: #222; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid #d5d5d5; background: #fff; border-radius: 10px; padding: .85rem 1rem; font: inherit; color: #222; }
+.form-field textarea { resize: vertical; }
+.form-field small { color: #777; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: 2px solid rgba(212,175,55,.45); border-color: var(--gold-strong); }
+.contact-form .btn, .proforma-form .btn { justify-self: start; border: 0; cursor: pointer; }
+.success-alert { margin-bottom: 1rem; padding: .85rem 1rem; border: 1px solid #a7d9b2; border-radius: 10px; background: #effaf1; color: #176b2a; font-weight: 600; }
+.validation-alert { border-radius: 10px; }
+
+.image-card { padding: 0 0 1.5rem; overflow: hidden; }
+.image-card img { width: 100%; height: 150px; object-fit: cover; margin-bottom: 1.2rem; }
+.image-card > :not(img) { margin-left: 1.2rem; margin-right: 1.2rem; }
+.image-card i { margin-left: auto; margin-right: auto; }
+
+.admin-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 2rem; }
+.admin-heading h1 { margin-bottom: .4rem; }
+.admin-heading .eyebrow { color: var(--gold-strong); margin-bottom: .35rem; font-size: .8rem; }
+.admin-section { border-top: 1px solid #e6e6e6; padding-top: 1.5rem; margin-top: 1.8rem; }
+.admin-section-title { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.admin-section-title h2 { font-size: 1.35rem; }
+.admin-section-title i { color: var(--red); margin-right: .45rem; }
+.admin-count, .admin-section-title > span { background: #111; color: var(--gold); border-radius: 999px; padding: .3rem .75rem; font-size: .8rem; font-weight: 800; }
+.message-row { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee; }
+.message-name { font-weight: 800; margin-bottom: .35rem; }
+.message-name span { display: inline-block; margin-left: .5rem; color: var(--red); font-size: .78rem; }
+.message-main p { color: #444; line-height: 1.5; }
+.message-main small { display: block; color: #777; margin-top: .45rem; }
+.status-form select { padding: .5rem; border: 1px solid #ccc; border-radius: 8px; background: #fff; }
+.status-form .btn { border: 0; cursor: pointer; white-space: nowrap; }
+.attended-label { color: #176b2a; font-weight: 800; white-space: nowrap; }
+.empty-state { padding: 1rem; color: #777; background: #fafafa; border: 1px dashed #ccc; }
+.proforma-list { display: grid; gap: .7rem; }
+.proforma-card { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem; background: #fafafa; border-left: 4px solid var(--gold); }
+.proforma-card p { color: #555; margin-top: .3rem; }
+.proforma-total { color: #111; font-weight: 800; text-align: right; }
+.proforma-total span { display: block; color: var(--gold-strong); font-size: .8rem; text-transform: capitalize; }
+.proforma-actions { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; justify-content: flex-end; }
+.proforma-actions .btn { border: 0; cursor: pointer; font-size: .8rem; padding: .55rem .8rem; }
+
 .info-banner {
     display: inline-flex;
     align-items: center;
@@ -636,4 +679,10 @@ section {
     .brand-sub {
         letter-spacing: 3px;
     }
+
+    .contact-form, .proforma-form { grid-template-columns: 1fr; }
+    .form-field-wide { grid-column: auto; }
+    .admin-heading, .message-row, .proforma-card { align-items: flex-start; flex-direction: column; }
+    .status-form { width: 100%; }
+    .status-form select { width: 100%; }
 }

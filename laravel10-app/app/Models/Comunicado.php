@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Herramienta extends Model
+class Comunicado extends Model
 {
     use HasFactory;
 
-    protected $table = 'herramientas';
-
-    protected $fillable = ['nombre', 'precio', 'stock'];
+    protected $fillable = [
+        'nombre', 'email', 'telefono', 'tipo_consulta', 'mensaje', 'estado',
+    ];
 }

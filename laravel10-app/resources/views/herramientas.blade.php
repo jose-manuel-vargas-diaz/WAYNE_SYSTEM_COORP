@@ -1,30 +1,43 @@
-@extends('layouts.integradora')
+@extends('layouts.wayne')
 
-@section('title', 'Ferretería El Tornillo')
+@section('title', 'Wayne System | Inventario')
 
 @section('content')
-    <div class="inventory-page">
-        <header class="inventory-header">
-            <h1>Ferretería El Tornillo</h1>
-            <p>En nuestra ferretería de barrio encuentras herramientas confiables para cada reparación y proyecto.</p>
-        </header>
+<section class="page-hero compact">
+    <p class="eyebrow">Inventario</p>
+    <h1>Stock de laptops y equipos disponibles</h1>
+    <p>Consulta el inventario activo con precios y unidades disponibles para venta y soporte.</p>
+</section>
 
-        <div class="inventory-summary">
-            <p>Hay <strong>{{ count($herramientas) }}</strong> herramientas en el inventario.</p>
-        </div>
-
-        <section class="tools-grid" aria-label="Herramientas registradas">
-            @forelse ($herramientas as $herramienta)
-                <article class="tool-card">
-                    <h2>{{ $herramienta->nombre }}</h2>
-                    <p>Precio: {{ $herramienta->precio }} Bs</p>
-                </article>
-            @empty
-                <p class="empty-inventory">Todavía no hay herramientas registradas.</p>
-            @endforelse
-        </section>
-
-        <p class="inventory-signature">Inventario atendido por José Manuel Vargas Diaz</p>
-        <a class="simple-link" href="/herramientas/nuevo">Registrar una herramienta</a>
+<section class="section-box">
+    <div class="section-title">
+        <i class="fas fa-laptop"></i> Equipos <span>disponibles</span>
     </div>
+
+    <div class="grid-3">
+        @forelse ($herramientas as $herramienta)
+            <article class="feature-card">
+                <i class="fas fa-laptop"></i>
+                <h3>{{ $herramienta->nombre }}</h3>
+                <p>Precio: {{ $herramienta->precio }} Bs</p>
+                <p>Stock: <strong>{{ $herramienta->stock }}</strong></p>
+                <span class="badge {{ $herramienta->stock > 0 ? 'badge-red' : 'badge-dark' }}">
+                    {{ $herramienta->stock > 0 ? 'Disponible' : 'Sin stock' }}
+                </span>
+            </article>
+        @empty
+            <p class="empty-state">Todavía no hay equipos registrados en el inventario.</p>
+        @endforelse
+    </div>
+</section>
+
+<section class="section-box alt">
+    <div class="info-banner">
+        <i class="fas fa-boxes-stacked"></i>
+        Inventario actualizado · Stock real · Atención directa
+    </div>
+    <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="/herramientas/nuevo" class="btn btn-primary">Registrar equipo</a>
+    </div>
+</section>
 @endsection

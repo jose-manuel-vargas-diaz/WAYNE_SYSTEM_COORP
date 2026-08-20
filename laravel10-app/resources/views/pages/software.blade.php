@@ -9,20 +9,23 @@
 </section>
 
 <section class="section-box">
-    <div class="grid-3">
-        <article class="feature-card">
+    <div class="grid-3 image-card-grid">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Productividad digital">
             <i class="fab fa-microsoft"></i>
             <h3>Microsoft 365</h3>
             <p>Office, Teams y almacenamiento para trabajo en equipo y productividad.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=700&q=80" alt="Seguridad informática">
             <i class="fas fa-shield-alt"></i>
             <h3>Antivirus</h3>
             <p>Protección avanzada contra amenazas, malware y ataques digitales.</p>
         </article>
 
-        <article class="feature-card">
+        <article class="feature-card image-card">
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=700&q=80" alt="Diseño digital">
             <i class="fas fa-paint-brush"></i>
             <h3>Diseño y CAD</h3>
             <p>Software profesional para diseño, arquitectura y creación visual.</p>

@@ -49,15 +49,6 @@ class AuthController extends Controller
         ])->onlyInput('username');
     }
 
-    public function admin()
-    {
-        if (!Auth::check()) {
-            return redirect()->route('login');
-        }
-
-        return view('admin.dashboard');
-    }
-
     public function logout(Request $request)
     {
         Auth::logout();

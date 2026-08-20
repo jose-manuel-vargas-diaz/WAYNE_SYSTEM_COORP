@@ -31,6 +31,7 @@
         <a href="{{ route('computadoras') }}"><i class="fas fa-laptop"></i> Computadoras</a>
         <a href="{{ route('software') }}"><i class="fas fa-code"></i> Software</a>
         <a href="{{ route('reparacion') }}"><i class="fas fa-tools"></i> Reparación</a>
+        <a href="{{ route('contacto') }}"><i class="fas fa-headset"></i> Atención al cliente</a>
     </nav>
 
     <main>

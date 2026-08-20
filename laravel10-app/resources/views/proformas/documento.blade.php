@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Proforma #{{ $proforma->id }} | Wayne System</title><style>body{font-family:Arial,sans-serif;color:#202020;max-width:800px;margin:40px auto;padding:30px;border:2px solid #d4af37}h1{margin:0;color:#111}h2{color:#b88d10;border-bottom:2px solid #d4af37;padding-bottom:8px}.header{display:flex;justify-content:space-between;border-bottom:4px solid #111;padding-bottom:20px}.meta{color:#555;line-height:1.6}.items{width:100%;border-collapse:collapse;margin-top:25px}.items th,.items td{padding:12px;border-bottom:1px solid #ddd;text-align:left}.items th{background:#111;color:#fff}.total{text-align:right;font-size:22px;font-weight:bold;margin-top:25px;color:#b88d10}.note{margin-top:35px;padding:15px;background:#f7f7f7}</style></head>
+<body>
+    <div class="header"><div><h1>WAYNE SYSTEM</h1><p>Soluciones tecnológicas</p></div><div class="meta"><strong>PROFORMA #{{ str_pad($proforma->id, 4, '0', STR_PAD_LEFT) }}</strong><br>{{ $proforma->created_at->format('d/m/Y') }}</div></div>
+    <h2>Datos del cliente</h2><div class="meta"><strong>{{ $proforma->cliente }}</strong><br>{{ $proforma->email }}<br>{{ $proforma->telefono }}<br>{{ $proforma->direccion ?: 'Sin dirección de entrega' }}</div>
+    <h2>Detalle del pedido</h2><table class="items"><thead><tr><th>Producto o servicio</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th></tr></thead><tbody>@foreach($proforma->items as $item)<tr><td>{{ $item['detalle'] }}</td><td>{{ $item['cantidad'] }}</td><td>Bs. {{ number_format($item['precio'], 2) }}</td><td>Bs. {{ number_format($item['cantidad'] * $item['precio'], 2) }}</td></tr>@endforeach</tbody></table>
+    <div class="total">TOTAL: Bs. {{ number_format($proforma->total, 2) }}</div><div class="note">Presenta esta proforma al momento de tu compra para revisar la disponibilidad y el descuento acordado.</div>
+</body></html>
